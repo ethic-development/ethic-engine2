@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="entry.cpp" />
+    <ClCompile Include="lua_env\lua\lapi.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lauxlib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lbaselib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lcode.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lcorolib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lctype.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\ldblib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\ldebug.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\ldo.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\ldump.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lfunc.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lgc.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\linit.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\liolib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\llex.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lmathlib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lmem.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\loadlib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lobject.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lopcodes.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\loslib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lparser.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lstate.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lstring.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lstrlib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\ltable.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\ltablib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\ltm.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lundump.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lutf8lib.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lvm.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua\lzio.c">
+      <Filter>lua_env\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\lua_overlay.cpp">
+      <Filter>lua_env</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_env\LuaVM.cpp">
+      <Filter>lua_env</Filter>
+    </ClCompile>
+    <ClCompile Include="mapper\drv_image\drv_image.cpp">
+      <Filter>mapper\drv_image</Filter>
+    </ClCompile>
+    <ClCompile Include="mapper\kernel_ctx\kernel_ctx.cpp">
+      <Filter>mapper\kernel_ctx</Filter>
+    </ClCompile>
+    <ClCompile Include="roblox\classes\classes.cpp">
+      <Filter>roblox\classes</Filter>
+    </ClCompile>
+    <ClCompile Include="roblox\aimbot\aimbot.cpp">
+      <Filter>roblox\aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="roblox\esp\esp.cpp">
+      <Filter>roblox\esp</Filter>
+    </ClCompile>
+    <ClCompile Include="roblox\globals\globals.cpp">
+      <Filter>roblox\globals</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\configs\configs.cpp">
+      <Filter>utils\configs</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\datamodel\datamodel.cpp">
+      <Filter>utils\datamodel</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\overlay\imgui\imgui.cpp">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\overlay\imgui\imgui_demo.cpp">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\overlay\imgui\imgui_draw.cpp">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\overlay\imgui\imgui_impl_dx11.cpp">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\overlay\imgui\imgui_impl_win32.cpp">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\overlay\imgui\imgui_tables.cpp">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\overlay\imgui\imgui_widgets.cpp">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\logs\logs.cpp">
+      <Filter>utils\datamodel\logs</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\overlay\overlay.cpp">
+      <Filter>utils\overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\overlay\imgui\TextEditor.cpp">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="nav_elements.cpp">
+      <Filter>utils\misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\lua\lapi.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lauxlib.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lcode.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lctype.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\ldebug.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\ldo.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lfunc.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lgc.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lobject.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\ljumptab.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\llex.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\llimits.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lmem.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lopcodes.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lopnames.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lparser.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lprefix.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lstate.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lstring.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\ltable.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\ltm.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lua.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lundump.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lvm.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lzio.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua_env\lua_overlay.hpp">
+      <Filter>lua_env</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lua.hpp">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\luaconf.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua_env\LuaVM.hpp">
+      <Filter>lua_env</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper\util\hook.hpp">
+      <Filter>mapper\util</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper\util\nt.hpp">
+      <Filter>mapper\util</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper\util\util.hpp">
+      <Filter>mapper\util</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper\drv_image\drv_image.h">
+      <Filter>mapper\drv_image</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper\kernel_ctx\kernel_ctx.h">
+      <Filter>mapper\kernel_ctx</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper\physmeme\physmeme.hpp">
+      <Filter>mapper\physmeme</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper\physmeme.hpp">
+      <Filter>mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper\raw_driver.hpp">
+      <Filter>mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper\loadup.hpp">
+      <Filter>mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="roblox\classes\classes.hpp">
+      <Filter>roblox\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="roblox\aimbot\aimbot.hpp">
+      <Filter>roblox\aimbot</Filter>
+    </ClInclude>
+    <ClInclude Include="roblox\esp\esp.hpp">
+      <Filter>roblox\esp</Filter>
+    </ClInclude>
+    <ClInclude Include="roblox\driver\driver_impl.hpp">
+      <Filter>roblox\classes\driver</Filter>
+    </ClInclude>
+    <ClInclude Include="mapper\driver_data.hpp">
+      <Filter>mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="roblox\globals\globals.hpp">
+      <Filter>roblox\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\configs\configs.hpp">
+      <Filter>utils\configs</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\datamodel\datamodel.hpp">
+      <Filter>utils\datamodel</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\imgui\imconfig.h">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\imgui\imgui.h">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\imgui\imgui_impl_dx11.h">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\imgui\imgui_impl_win32.h">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\imgui\imgui_internal.h">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\imgui\imstb_rectpack.h">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\imgui\imstb_textedit.h">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\imgui\imstb_truetype.h">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\json\json.hpp">
+      <Filter>utils\datamodel\json</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\keyauth\json.hpp">
+      <Filter>utils\datamodel\json</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\logs\logs.hpp">
+      <Filter>utils\datamodel\logs</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\ckeybind\keybind.hpp">
+      <Filter>utils\overlay\ckeybind</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua\lualib.h">
+      <Filter>lua_env\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\skcrypt\skStr.hpp">
+      <Filter>utils\skcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\xorstr\xorstr.hpp">
+      <Filter>utils\xorstr</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\keyauth\utils.hpp">
+      <Filter>utils\datamodel\logs</Filter>
+    </ClInclude>
+    <ClInclude Include="keyauth\keyauth.hpp">
+      <Filter>utils\overlay\auth</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\overlay\overlay.hpp">
+      <Filter>utils\overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="animation.h">
+      <Filter>utils\overlay\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="icons.h">
+      <Filter>utils\overlay\icons</Filter>
+    </ClInclude>
+    <ClInclude Include="fonts.h">
+      <Filter>utils\overlay\icons</Filter>
+    </ClInclude>
+    <ClInclude Include="icon.h">
+      <Filter>utils\overlay\icons</Filter>
+    </ClInclude>
+    <ClInclude Include="nav_elements.h">
+      <Filter>utils\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="font_raw.h">
+      <Filter>utils\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="segue_font.h">
+      <Filter>utils\overlay\icons</Filter>
+    </ClInclude>
+    <ClInclude Include="ico_font.h">
+      <Filter>utils\overlay\icons</Filter>
+    </ClInclude>
+    <ClInclude Include="simple antidebug.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libraries\library_x64.lib">
+      <Filter>utils\overlay\auth</Filter>
+    </Library>
+    <Library Include="libraries\libcurl.lib">
+      <Filter>utils\overlay\auth</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="lua_env">
+      <UniqueIdentifier>{b3355d92-2b1a-4277-95d1-6da40d0cbeee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lua_env\lua">
+      <UniqueIdentifier>{a54165a4-29ad-49a4-8ae1-e1358b42a199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mapper">
+      <UniqueIdentifier>{ff7b2c84-f384-41fb-9d41-085eaaa34ce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mapper\kernel_ctx">
+      <UniqueIdentifier>{656d65eb-3826-496f-abe7-d4ffd8ec2b2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mapper\drv_image">
+      <UniqueIdentifier>{e8991b65-3ed8-4379-b8c8-d9dd9c4d7d81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mapper\physmeme">
+      <UniqueIdentifier>{6b7c1be6-abf9-4c34-b863-e64cec72db1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mapper\util">
+      <UniqueIdentifier>{cfbcf0f3-e519-49c0-938e-16e9022f73ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="roblox">
+      <UniqueIdentifier>{015530c3-b7fd-48ca-bb64-a0a65e4a7df0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="roblox\aimbot">
+      <UniqueIdentifier>{f6a1315e-51ff-400a-bf22-3bf133fda901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="roblox\classes">
+      <UniqueIdentifier>{01b17bb3-1e2f-4fcc-973a-bb22434e4bf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="roblox\globals">
+      <UniqueIdentifier>{60d50bb2-9271-4bfc-86e9-920257430cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="roblox\esp">
+      <UniqueIdentifier>{ee62e0be-f806-4c5f-8bae-e9401961d6fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{2e88e5e5-7622-42fd-a315-5d59b7e096ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\configs">
+      <UniqueIdentifier>{ee362f4b-4001-404a-93f8-5e4cd499d46a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\datamodel">
+      <UniqueIdentifier>{eeae8b9e-7c06-4b71-b897-d67930269ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\skcrypt">
+      <UniqueIdentifier>{57fb4cc6-6189-43bc-9d14-1d0fbc010bb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\xorstr">
+      <UniqueIdentifier>{ee114689-92be-4491-a2ea-3afc7bd1e24d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\datamodel\json">
+      <UniqueIdentifier>{63f150ec-8f46-43e4-98b6-91ae4e09f629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="roblox\classes\driver">
+      <UniqueIdentifier>{0ff34cab-35f6-44d5-8dcf-eb96b1cb8672}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\misc">
+      <UniqueIdentifier>{3aceeb69-e254-422c-854c-acf9e8c7c699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\overlay">
+      <UniqueIdentifier>{1ec5a5ed-9354-43fa-8b1a-f41e6ca542dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\overlay\ckeybind">
+      <UniqueIdentifier>{459b9621-d9e2-4f4c-a510-78a82f666511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\overlay\imgui">
+      <UniqueIdentifier>{8a0239ee-500b-4c65-8562-0fc7c03dfb42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\overlay\auth">
+      <UniqueIdentifier>{acd5d211-7248-4288-ba27-ed453de76699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\overlay\icons">
+      <UniqueIdentifier>{ea5b653a-fb74-42ef-a3a7-9f74950cc10a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\datamodel\logs">
+      <UniqueIdentifier>{813a9a3b-b566-40aa-9058-d57f8dcf49b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\auth">
+      <UniqueIdentifier>{1f5cbc8e-5ea8-4bfa-921b-320eb510a2b1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
