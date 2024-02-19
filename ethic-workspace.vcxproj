@@ -22,29 +22,29 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{5d32816a-b987-45ce-9f20-ddae6ee9b272}</ProjectGuid>
-    <RootNamespace>antagonistexternal</RootNamespace>
+    <RootNamespace>Ethic</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>roblox-workspace</ProjectName>
+    <ProjectName>ethic-workspace</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -72,9 +72,33 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\me\Desktop\curl\include;C:\Users\bladee\Downloads\curl-8.5.0\curl-8.5.0\include;C:\Users\bladee\Desktop\carti_will_never_drop\themida;$(IncludePath);$(ProjectDir)include</IncludePath>
-    <LibraryPath>C:\Users\me\Desktop\curl\lib;C:\Users\me\Desktop\_antagon\libraries;C:\Users\bladee\Downloads\curl-8.5.0\curl-8.5.0\lib;C:\Users\bladee\Desktop\_antagonist-external\libraries;$(LibraryPath);$(ProjectDir)libraries</LibraryPath>
+    <IncludePath>$(ProjectDir)dependencies\curl\;$(ProjectDir)dependencies\lua\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath);$(ProjectDir)libraries\</LibraryPath>
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build\</OutDir>
+    <IntDir>$(ProjectDir)intermediates\</IntDir>
+    <TargetName>$(RootNamespace)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)build\</OutDir>
+    <IntDir>$(ProjectDir)intermediates\</IntDir>
+    <TargetName>$(RootNamespace)</TargetName>
+    <IncludePath>$(ProjectDir)dependencies\curl\;$(ProjectDir)dependencies\lua\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath);$(ProjectDir)libraries\</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)build\</OutDir>
+    <IntDir>$(ProjectDir)intermediates\</IntDir>
+    <TargetName>$(RootNamespace)</TargetName>
+    <IncludePath>$(ProjectDir)dependencies\curl\;$(ProjectDir)dependencies\lua\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath);$(ProjectDir)libraries\</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)build\</OutDir>
+    <IntDir>$(ProjectDir)intermediates\</IntDir>
+    <TargetName>$(RootNamespace)</TargetName>
+    <IncludePath>$(ProjectDir)dependencies\curl\;$(ProjectDir)dependencies\lua\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath);$(ProjectDir)libraries\</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -82,11 +106,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)dependencies\;$(ProjectDir)src\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;$(ProjectDir)libraries\library_x64.lib;Crypt32.lib;Wldap32.lib;libcurl.lib;library_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -97,12 +125,16 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)dependencies\;$(ProjectDir)src\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;$(ProjectDir)libraries\library_x64.lib;Crypt32.lib;Wldap32.lib;libcurl.lib;library_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -112,10 +144,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)dependencies\;$(ProjectDir)src\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;$(ProjectDir)libraries\library_x64.lib;Crypt32.lib;Wldap32.lib;libcurl.lib;library_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,8 +162,9 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include/lua</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)dependencies\;$(ProjectDir)src\</AdditionalIncludeDirectories>
       <WholeProgramOptimization>true</WholeProgramOptimization>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,141 +172,148 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;C:\Users\korea\source\repos\ethic workspace\rblx\libraries\library_x64.lib;Crypt32.lib;Wldap32.lib;libcurl.lib;library_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;Normaliz.lib;$(ProjectDir)libraries\library_x64.lib;Crypt32.lib;Wldap32.lib;libcurl.lib;library_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
       <EnableUAC>true</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="lua_env\LuaVM.cpp" />
-    <ClCompile Include="lua_env\lua\lapi.c" />
-    <ClCompile Include="lua_env\lua\lauxlib.c" />
-    <ClCompile Include="lua_env\lua\lbaselib.c" />
-    <ClCompile Include="lua_env\lua\lcode.c" />
-    <ClCompile Include="lua_env\lua\lcorolib.c" />
-    <ClCompile Include="lua_env\lua\lctype.c" />
-    <ClCompile Include="lua_env\lua\ldblib.c" />
-    <ClCompile Include="lua_env\lua\ldebug.c" />
-    <ClCompile Include="lua_env\lua\ldo.c" />
-    <ClCompile Include="lua_env\lua\ldump.c" />
-    <ClCompile Include="lua_env\lua\lfunc.c" />
-    <ClCompile Include="lua_env\lua\lgc.c" />
-    <ClCompile Include="lua_env\lua\linit.c" />
-    <ClCompile Include="lua_env\lua\liolib.c" />
-    <ClCompile Include="lua_env\lua\llex.c" />
-    <ClCompile Include="lua_env\lua\lmathlib.c" />
-    <ClCompile Include="lua_env\lua\lmem.c" />
-    <ClCompile Include="lua_env\lua\loadlib.c" />
-    <ClCompile Include="lua_env\lua\lobject.c" />
-    <ClCompile Include="lua_env\lua\lopcodes.c" />
-    <ClCompile Include="lua_env\lua\loslib.c" />
-    <ClCompile Include="lua_env\lua\lparser.c" />
-    <ClCompile Include="lua_env\lua\lstate.c" />
-    <ClCompile Include="lua_env\lua\lstring.c" />
-    <ClCompile Include="lua_env\lua\lstrlib.c" />
-    <ClCompile Include="lua_env\lua\ltable.c" />
-    <ClCompile Include="lua_env\lua\ltablib.c" />
-    <ClCompile Include="lua_env\lua\ltm.c" />
-    <ClCompile Include="lua_env\lua\lundump.c" />
-    <ClCompile Include="lua_env\lua\lutf8lib.c" />
-    <ClCompile Include="lua_env\lua\lvm.c" />
-    <ClCompile Include="lua_env\lua\lzio.c" />
-    <ClCompile Include="lua_env\lua_overlay.cpp" />
-    <ClCompile Include="entry.cpp" />
-    <ClCompile Include="mapper\drv_image\drv_image.cpp" />
-    <ClCompile Include="mapper\kernel_ctx\kernel_ctx.cpp" />
-    <ClCompile Include="nav_elements.cpp" />
-    <ClCompile Include="roblox\aimbot\aimbot.cpp" />
-    <ClCompile Include="roblox\classes\classes.cpp" />
-    <ClCompile Include="roblox\esp\esp.cpp" />
-    <ClCompile Include="roblox\globals\globals.cpp" />
-    <ClCompile Include="utils\configs\configs.cpp" />
-    <ClCompile Include="utils\datamodel\datamodel.cpp" />
-    <ClCompile Include="utils\logs\logs.cpp" />
-    <ClCompile Include="utils\overlay\imgui\imgui.cpp" />
-    <ClCompile Include="utils\overlay\imgui\imgui_demo.cpp" />
-    <ClCompile Include="utils\overlay\imgui\imgui_draw.cpp" />
-    <ClCompile Include="utils\overlay\imgui\imgui_impl_dx11.cpp" />
-    <ClCompile Include="utils\overlay\imgui\imgui_impl_win32.cpp" />
-    <ClCompile Include="utils\overlay\imgui\imgui_tables.cpp" />
-    <ClCompile Include="utils\overlay\imgui\imgui_widgets.cpp" />
-    <ClCompile Include="utils\overlay\imgui\TextEditor.cpp" />
-    <ClCompile Include="utils\overlay\overlay.cpp" />
+    <ClCompile Include="src\anti_tamper\anti_debug\anti_debug.cpp" />
+    <ClCompile Include="src\anti_tamper\anti_module\anti_module.cpp" />
+    <ClCompile Include="src\anti_tamper\trap_flag\trap_flag.cpp" />
+    <ClCompile Include="src\lua_env\LuaVM.cpp" />
+    <ClCompile Include="src\lua_env\lua\lapi.c" />
+    <ClCompile Include="src\lua_env\lua\lauxlib.c" />
+    <ClCompile Include="src\lua_env\lua\lbaselib.c" />
+    <ClCompile Include="src\lua_env\lua\lcode.c" />
+    <ClCompile Include="src\lua_env\lua\lcorolib.c" />
+    <ClCompile Include="src\lua_env\lua\lctype.c" />
+    <ClCompile Include="src\lua_env\lua\ldblib.c" />
+    <ClCompile Include="src\lua_env\lua\ldebug.c" />
+    <ClCompile Include="src\lua_env\lua\ldo.c" />
+    <ClCompile Include="src\lua_env\lua\ldump.c" />
+    <ClCompile Include="src\lua_env\lua\lfunc.c" />
+    <ClCompile Include="src\lua_env\lua\lgc.c" />
+    <ClCompile Include="src\lua_env\lua\linit.c" />
+    <ClCompile Include="src\lua_env\lua\liolib.c" />
+    <ClCompile Include="src\lua_env\lua\llex.c" />
+    <ClCompile Include="src\lua_env\lua\lmathlib.c" />
+    <ClCompile Include="src\lua_env\lua\lmem.c" />
+    <ClCompile Include="src\lua_env\lua\loadlib.c" />
+    <ClCompile Include="src\lua_env\lua\lobject.c" />
+    <ClCompile Include="src\lua_env\lua\lopcodes.c" />
+    <ClCompile Include="src\lua_env\lua\loslib.c" />
+    <ClCompile Include="src\lua_env\lua\lparser.c" />
+    <ClCompile Include="src\lua_env\lua\lstate.c" />
+    <ClCompile Include="src\lua_env\lua\lstring.c" />
+    <ClCompile Include="src\lua_env\lua\lstrlib.c" />
+    <ClCompile Include="src\lua_env\lua\ltable.c" />
+    <ClCompile Include="src\lua_env\lua\ltablib.c" />
+    <ClCompile Include="src\lua_env\lua\ltm.c" />
+    <ClCompile Include="src\lua_env\lua\lundump.c" />
+    <ClCompile Include="src\lua_env\lua\lutf8lib.c" />
+    <ClCompile Include="src\lua_env\lua\lvm.c" />
+    <ClCompile Include="src\lua_env\lua\lzio.c" />
+    <ClCompile Include="src\lua_env\lua_overlay.cpp" />
+    <ClCompile Include="src\entry.cpp" />
+    <ClCompile Include="src\mapper\drv_image\drv_image.cpp" />
+    <ClCompile Include="src\mapper\kernel_ctx\kernel_ctx.cpp" />
+    <ClCompile Include="src\nav_elements.cpp" />
+    <ClCompile Include="src\roblox\aimbot\aimbot.cpp" />
+    <ClCompile Include="src\roblox\classes\classes.cpp" />
+    <ClCompile Include="src\roblox\esp\esp.cpp" />
+    <ClCompile Include="src\roblox\globals\globals.cpp" />
+    <ClCompile Include="src\utils\configs\configs.cpp" />
+    <ClCompile Include="src\utils\datamodel\datamodel.cpp" />
+    <ClCompile Include="src\utils\log_reader\log_reader.cpp" />
+    <ClCompile Include="src\utils\overlay\imgui\imgui.cpp" />
+    <ClCompile Include="src\utils\overlay\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\utils\overlay\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\utils\overlay\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="src\utils\overlay\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\utils\overlay\imgui\imgui_tables.cpp" />
+    <ClCompile Include="src\utils\overlay\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\utils\overlay\imgui\TextEditor.cpp" />
+    <ClCompile Include="src\utils\overlay\overlay.cpp" />
+    <ClCompile Include="src\utils\singleton\singleton.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="animation.h" />
-    <ClInclude Include="fonts.h" />
-    <ClInclude Include="font_raw.h" />
-    <ClInclude Include="icon.h" />
-    <ClInclude Include="icons.h" />
-    <ClInclude Include="ico_font.h" />
-    <ClInclude Include="include\lua\lapi.h" />
-    <ClInclude Include="include\lua\lauxlib.h" />
-    <ClInclude Include="include\lua\lcode.h" />
-    <ClInclude Include="include\lua\lctype.h" />
-    <ClInclude Include="include\lua\ldebug.h" />
-    <ClInclude Include="include\lua\ldo.h" />
-    <ClInclude Include="include\lua\lfunc.h" />
-    <ClInclude Include="include\lua\lgc.h" />
-    <ClInclude Include="include\lua\ljumptab.h" />
-    <ClInclude Include="include\lua\llex.h" />
-    <ClInclude Include="include\lua\llimits.h" />
-    <ClInclude Include="include\lua\lmem.h" />
-    <ClInclude Include="include\lua\lobject.h" />
-    <ClInclude Include="include\lua\lopcodes.h" />
-    <ClInclude Include="include\lua\lopnames.h" />
-    <ClInclude Include="include\lua\lparser.h" />
-    <ClInclude Include="include\lua\lprefix.h" />
-    <ClInclude Include="include\lua\lstate.h" />
-    <ClInclude Include="include\lua\lstring.h" />
-    <ClInclude Include="include\lua\ltable.h" />
-    <ClInclude Include="include\lua\ltm.h" />
-    <ClInclude Include="include\lua\lua.h" />
-    <ClInclude Include="include\lua\lua.hpp" />
-    <ClInclude Include="include\lua\luaconf.h" />
-    <ClInclude Include="include\lua\lualib.h" />
-    <ClInclude Include="include\lua\lundump.h" />
-    <ClInclude Include="include\lua\lvm.h" />
-    <ClInclude Include="include\lua\lzio.h" />
-    <ClInclude Include="keyauth\keyauth.hpp" />
-    <ClInclude Include="lua_env\LuaVM.hpp" />
-    <ClInclude Include="lua_env\lua_overlay.hpp" />
-    <ClInclude Include="mapper\driver_data.hpp" />
-    <ClInclude Include="mapper\drv_image\drv_image.h" />
-    <ClInclude Include="mapper\kernel_ctx\kernel_ctx.h" />
-    <ClInclude Include="mapper\loadup.hpp" />
-    <ClInclude Include="mapper\physmeme.hpp" />
-    <ClInclude Include="mapper\physmeme\physmeme.hpp" />
-    <ClInclude Include="mapper\raw_driver.hpp" />
-    <ClInclude Include="mapper\util\hook.hpp" />
-    <ClInclude Include="mapper\util\nt.hpp" />
-    <ClInclude Include="mapper\util\util.hpp" />
-    <ClInclude Include="nav_elements.h" />
-    <ClInclude Include="roblox\aimbot\aimbot.hpp" />
-    <ClInclude Include="roblox\classes\classes.hpp" />
-    <ClInclude Include="roblox\driver\driver_impl.hpp" />
-    <ClInclude Include="roblox\esp\esp.hpp" />
-    <ClInclude Include="roblox\globals\globals.hpp" />
-    <ClInclude Include="segue_font.h" />
-    <ClInclude Include="simple antidebug.h" />
-    <ClInclude Include="utils\configs\configs.hpp" />
-    <ClInclude Include="utils\datamodel\datamodel.hpp" />
-    <ClInclude Include="utils\json\json.hpp" />
-    <ClInclude Include="utils\logs\logs.hpp" />
-    <ClInclude Include="utils\overlay\ckeybind\keybind.hpp" />
-    <ClInclude Include="utils\overlay\imgui\imconfig.h" />
-    <ClInclude Include="utils\overlay\imgui\imgui.h" />
-    <ClInclude Include="utils\overlay\imgui\imgui_impl_dx11.h" />
-    <ClInclude Include="utils\overlay\imgui\imgui_impl_win32.h" />
-    <ClInclude Include="utils\overlay\imgui\imgui_internal.h" />
-    <ClInclude Include="utils\overlay\imgui\imstb_rectpack.h" />
-    <ClInclude Include="utils\overlay\imgui\imstb_textedit.h" />
-    <ClInclude Include="utils\overlay\imgui\imstb_truetype.h" />
-    <ClInclude Include="utils\overlay\keyauth\json.hpp" />
-    <ClInclude Include="utils\overlay\keyauth\utils.hpp" />
-    <ClInclude Include="utils\overlay\overlay.hpp" />
-    <ClInclude Include="utils\skcrypt\skStr.hpp" />
-    <ClInclude Include="utils\xorstr\xorstr.hpp" />
+    <ClInclude Include="src\animation.h" />
+    <ClInclude Include="src\anti_tamper\anti_debug\anti_debug.hpp" />
+    <ClInclude Include="src\anti_tamper\anti_module\anti_module.hpp" />
+    <ClInclude Include="src\anti_tamper\trap_flag\trap_flag.hpp" />
+    <ClInclude Include="src\fonts.h" />
+    <ClInclude Include="src\font_raw.h" />
+    <ClInclude Include="src\icon.h" />
+    <ClInclude Include="src\icons.h" />
+    <ClInclude Include="src\ico_font.h" />
+    <ClInclude Include="dependencies\lua\lapi.h" />
+    <ClInclude Include="dependencies\lua\lauxlib.h" />
+    <ClInclude Include="dependencies\lua\lcode.h" />
+    <ClInclude Include="dependencies\lua\lctype.h" />
+    <ClInclude Include="dependencies\lua\ldebug.h" />
+    <ClInclude Include="dependencies\lua\ldo.h" />
+    <ClInclude Include="dependencies\lua\lfunc.h" />
+    <ClInclude Include="dependencies\lua\lgc.h" />
+    <ClInclude Include="dependencies\lua\ljumptab.h" />
+    <ClInclude Include="dependencies\lua\llex.h" />
+    <ClInclude Include="dependencies\lua\llimits.h" />
+    <ClInclude Include="dependencies\lua\lmem.h" />
+    <ClInclude Include="dependencies\lua\lobject.h" />
+    <ClInclude Include="dependencies\lua\lopcodes.h" />
+    <ClInclude Include="dependencies\lua\lopnames.h" />
+    <ClInclude Include="dependencies\lua\lparser.h" />
+    <ClInclude Include="dependencies\lua\lprefix.h" />
+    <ClInclude Include="dependencies\lua\lstate.h" />
+    <ClInclude Include="dependencies\lua\lstring.h" />
+    <ClInclude Include="dependencies\lua\ltable.h" />
+    <ClInclude Include="dependencies\lua\ltm.h" />
+    <ClInclude Include="dependencies\lua\lua.h" />
+    <ClInclude Include="dependencies\lua\lua.hpp" />
+    <ClInclude Include="dependencies\lua\luaconf.h" />
+    <ClInclude Include="dependencies\lua\lualib.h" />
+    <ClInclude Include="dependencies\lua\lundump.h" />
+    <ClInclude Include="dependencies\lua\lvm.h" />
+    <ClInclude Include="dependencies\lua\lzio.h" />
+    <ClInclude Include="dependencies\keyauth\keyauth.hpp" />
+    <ClInclude Include="src\lua_env\LuaVM.hpp" />
+    <ClInclude Include="src\lua_env\lua_overlay.hpp" />
+    <ClInclude Include="src\mapper\driver_data.hpp" />
+    <ClInclude Include="src\mapper\drv_image\drv_image.h" />
+    <ClInclude Include="src\mapper\kernel_ctx\kernel_ctx.h" />
+    <ClInclude Include="src\mapper\loadup.hpp" />
+    <ClInclude Include="src\mapper\physmeme.hpp" />
+    <ClInclude Include="src\mapper\physmeme\physmeme.hpp" />
+    <ClInclude Include="src\mapper\raw_driver.hpp" />
+    <ClInclude Include="src\mapper\util\hook.hpp" />
+    <ClInclude Include="src\mapper\util\nt.hpp" />
+    <ClInclude Include="src\mapper\util\util.hpp" />
+    <ClInclude Include="src\nav_elements.h" />
+    <ClInclude Include="src\roblox\aimbot\aimbot.hpp" />
+    <ClInclude Include="src\roblox\classes\classes.hpp" />
+    <ClInclude Include="src\roblox\driver\driver_impl.hpp" />
+    <ClInclude Include="src\roblox\esp\esp.hpp" />
+    <ClInclude Include="src\roblox\globals\globals.hpp" />
+    <ClInclude Include="src\segue_font.h" />
+    <ClInclude Include="src\utils\configs\configs.hpp" />
+    <ClInclude Include="src\utils\datamodel\datamodel.hpp" />
+    <ClInclude Include="src\utils\json\json.hpp" />
+    <ClInclude Include="src\utils\log_reader\log_reader.hpp" />
+    <ClInclude Include="src\utils\overlay\ckeybind\keybind.hpp" />
+    <ClInclude Include="src\utils\overlay\imgui\imconfig.h" />
+    <ClInclude Include="src\utils\overlay\imgui\imgui.h" />
+    <ClInclude Include="src\utils\overlay\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="src\utils\overlay\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="src\utils\overlay\imgui\imgui_internal.h" />
+    <ClInclude Include="src\utils\overlay\imgui\imstb_rectpack.h" />
+    <ClInclude Include="src\utils\overlay\imgui\imstb_textedit.h" />
+    <ClInclude Include="src\utils\overlay\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\utils\overlay\keyauth\json.hpp" />
+    <ClInclude Include="src\utils\overlay\keyauth\utils.hpp" />
+    <ClInclude Include="src\utils\overlay\overlay.hpp" />
+    <ClInclude Include="src\utils\singleton\singleton.hpp" />
+    <ClInclude Include="src\utils\skcrypt\skStr.hpp" />
+    <ClInclude Include="src\utils\xorstr\xorstr.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="libraries\libcurl.lib" />

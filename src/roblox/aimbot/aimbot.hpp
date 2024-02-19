@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../classes/classes.hpp"
+#include <thread>
 
 namespace ethic
 {

@@ -1,4 +1,4 @@
-#include "../utils/xorstr/xorstr.hpp"
+#include "../../src/utils/skcrypt/skStr.hpp"
 #include <string>
 
 #include <Windows.h>
@@ -6,7 +6,7 @@
 #include <vector>
 #include <fstream>
 
-auto name = skCrypt("valorant");
+auto name = skCrypt("mov, rax");
 auto ownerid = skCrypt("u3htrvOHWw");
 auto secret = skCrypt("cad03cdb675bd9cb8737dd0f0df98ba3a9a28764f45d6e51862d383be32550b7");
 auto version = skCrypt("1.1");

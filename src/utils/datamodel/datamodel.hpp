@@ -1,5 +1,5 @@
 #pragma once
-#include "../logs/logs.hpp"
+#include "../log_reader/log_reader.hpp"
 
 #include <fstream>
 #include <iostream>

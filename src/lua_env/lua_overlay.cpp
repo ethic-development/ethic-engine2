@@ -1,5 +1,5 @@
-#include "../../utils/overlay/imgui/imgui.h"
-#include "../../utils/overlay/imgui/TextEditor.h"
+#include "../utils/overlay/imgui/imgui.h"
+#include "../utils/overlay/imgui/TextEditor.h"
 #include "../roblox/globals/globals.hpp"
 
 namespace ethic

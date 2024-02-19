@@ -165,7 +165,7 @@ void run(ethic::roblox::instance_t player)
 
 	ethic::roblox::vector3_t head_pos_3d;
 
-	if (globals::prediction)
+	if (globals::prediction) // not functioning correctly.
 	{
 		ethic::roblox::vector3_t velocity = player.get_part_velocity();
 		auto velocity_vec = div_vector_3(velocity, { globals::prediction_x, globals::prediction_y, globals::prediction_x });
@@ -189,7 +189,9 @@ void run(ethic::roblox::instance_t player)
 	relative.y = (head_pos.y - cursor_pos.y) * globals::sensitivity / globals::smoothness_y;
 
 	if (relative.x == -1 || relative.y == -1)
+	{
 		return;
+	}
 
 	if (globals::disable_outside_fov && (dist <= globals::fov))
 	{
@@ -259,6 +261,6 @@ void ethic::roblox::hook_aimbot()
 			}
 		}
 
-		Sleep(1);
+		std::this_thread::sleep_for(std::chrono::milliseconds(1));
 	}
 }

@@ -21,10 +21,9 @@
 
 #include <filesystem>
 #include "../../icons.h"
-#include "../../fonts.h"
 #include "../../animation.h"
 #include "../../icon.h"
-#include "../font_raw.h"
+#include "../../font_raw.h"
 #include "../../nav_elements.h"
 static int tabs = 1;
 
