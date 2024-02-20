@@ -60,31 +60,30 @@ int main()
 	std::getline(std::cin, license_key);
 	keyauth_app.license(license_key);
 
-	if (keyauth_app.data.success)
-	{
-
-		const auto app_data = ethic::utils::appdata_path();
-		if (!std::filesystem::exists(app_data + "\\ethic"))
-		{
-			std::filesystem::create_directory(app_data + "\\ethic");
-		}
-
-		if (!std::filesystem::exists(app_data + "\\ethic\\configs"))
-		{
-			std::filesystem::create_directory(app_data + "\\ethic\\configs");
-		}
-
-		ethic::roblox::init();
-
-		printf(skCrypt("Press anything to quit...\n"));
-		std::cin.get();
-		return 0;
-	}
-	else
-	{
+	if (!keyauth_app.data.success)							 // NOTE: We're not using if success, because that's an easy case to get trampoline patched. 
+	{													 // Example of that would be !address = 000007F & address = 000008F, so we would use on !address func "jmp 000008F". - korea
 		system("cls");
 		printf("%s\n", keyauth_app.data.message.c_str());
 		for (;;);
 	}
 
+	const auto app_data = ethic::utils::appdata_path();
+
+	if (!std::filesystem::exists(app_data + "\\ethic"))
+	{
+		std::filesystem::create_directory(app_data + "\\ethic");
+	}
+
+	if (!std::filesystem::exists(app_data + "\\ethic\\configs"))
+	{
+		std::filesystem::create_directory(app_data + "\\ethic\\configs");
+	}
+
+	ethic::roblox::init();
+
+	printf(skCrypt("Press anything to quit...\n"));
+
+	std::cin.get();
+
+	return 0;
 }
